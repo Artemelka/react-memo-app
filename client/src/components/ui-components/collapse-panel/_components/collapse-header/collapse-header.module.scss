@@ -1,0 +1,115 @@
+.Collapse-header {
+  align-items: center;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  outline: none;
+  padding: 8px 16px;
+  transition: color .3s, border .5s ease-in;
+
+  &--theme {
+    &-base {
+      background-color: var(--mainColor);
+      border-color: var(--mainColor);
+      color: var(--baseColor);
+    }
+
+    &-accent {
+      background-color: var(--accentColor);
+      border-color: var(--accentColor);
+      color: var(--accentColor);
+    }
+
+    &-secondary {
+      background-color: var(--secondaryColor);
+      border-color: var(--secondaryColor);
+      color: var(--secondaryColor);
+    }
+
+    &-primary {
+      background-color: var(--primaryColor);
+      border-color: var(--primaryColor);
+      color: var(--primaryColor);
+    }
+
+    &-success {
+      background-color: var(--successColor);
+      border-color: var(--successColor);
+      color: var(--successColor);
+    }
+
+    &-error {
+      background-color: var(--errorColor);
+      border-color: var(--errorColor);
+      color: var(--errorColor);
+    }
+  }
+
+  &--variant {
+    &-base {
+      background-color: transparent;
+    }
+    &-filled {
+      color: var(--baseColor);
+
+      &-no-action {
+        background-color: transparent;
+      }
+    }
+    &-only-text {
+      background-color: transparent;
+    }
+  }
+
+  &--disabled {
+    border-color: var(--disabledColor);
+    color: var(--disabledColor);
+
+    &-filled {
+      background-color: var(--disabledColor);
+      color: var(--mainColor);
+    }
+  }
+
+  &--opened {
+    border-bottom-width: 1px;
+    transition: border .1s ease-out;
+  }
+
+  &--clickable {
+    padding: 4px;
+  }
+
+  &__custom-panel {
+    width: 100%;
+  }
+
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__content {
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &--size {
+      &-big {
+        font-size: 26px;
+      }
+      &-medium {
+        font-size: 16px;
+      }
+      &-small {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__action {
+    margin-left: auto;
+    padding-left: 15px;
+  }
+}

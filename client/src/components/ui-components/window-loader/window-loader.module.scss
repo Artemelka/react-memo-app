@@ -1,0 +1,60 @@
+@import "../../../styles/constants.module";
+
+$circlesMaxDuration: 5;
+$animationTranslateSize: $circlesMaxDuration * 6px;
+$containerSize: $circlesMaxDuration * 20px;
+$animationTime: $circlesMaxDuration * 20s / 100;
+
+@keyframes loader {
+  0%,
+  100% {
+    transform: translateZ(-$animationTranslateSize);
+  }
+  50% {
+    transform: translateZ($animationTranslateSize);
+  }
+}
+
+.Window-loader {
+  height: $containerSize;
+  position: relative;
+  transform: perspective(500px) rotateX(60deg);
+  transform-style: preserve-3d;
+  width: $containerSize;
+
+  &__circle {
+    animation: loader $animationTime ease-in-out infinite;
+    border: 5px solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+
+    &--main {
+      border-color: var(--activeColor, $activeColor);
+      box-shadow: 0 5px 0 var(--activeColor, $activeColor), inset 0 5px 0 var(--activeColor, $activeColor);
+    }
+    &--accent {
+      border-color: var(--accentColor, $accentColor);
+      box-shadow: 0 5px 0 var(--accentColor, $accentColor), inset 0 5px 0 var(--accentColor, $accentColor);
+    }
+    &--primary {
+      border-color: var(--primaryColor, $primaryColor);
+      box-shadow: 0 5px 0 var(--primaryColor, $primaryColor), inset 0 5px 0 var(--primaryColor, $primaryColor);
+    }
+    &--secondary {
+      border-color: var(--secondaryColor, $secondaryColor);
+      box-shadow: 0 5px 0 var(--secondaryColor, $secondaryColor), inset 0 5px 0 var(--secondaryColor, $secondaryColor);
+    }
+
+    @for $i from 1 to $circlesMaxDuration + 1 {
+      &:nth-child(#{$i}) {
+        animation-delay: ($circlesMaxDuration - $i) * 100ms;
+        bottom: $i * 10 - 10px;
+        left: $i * 10 - 10px;
+        right: $i * 10 - 10px;
+        top: $i * 10 - 10px;
+      }
+    }
+  }
+}

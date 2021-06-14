@@ -1,0 +1,13 @@
+.Home-page-photo-collection {
+  padding: 15px 30px;
+
+  &__list {
+    margin-top: 20px;
+    min-height: 300px;
+    position: relative;
+  }
+
+  &__pagination {
+    margin-top: 10px;
+  }
+}

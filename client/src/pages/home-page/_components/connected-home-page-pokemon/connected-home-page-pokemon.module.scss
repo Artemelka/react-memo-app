@@ -1,0 +1,20 @@
+.Home-page-pokemon {
+  padding: 15px 30px;
+  position: relative;
+
+  &__name {
+    margin-top: 30px;
+  }
+
+  &__title {
+    margin-top: 20px;
+  }
+
+  &__list {
+    margin-top: 10px;
+  }
+
+  &__item {
+    padding: 5px;
+  }
+}

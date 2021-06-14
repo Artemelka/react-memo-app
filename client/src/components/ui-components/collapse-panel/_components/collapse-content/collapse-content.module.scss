@@ -1,0 +1,68 @@
+.Collapse-content {
+  box-sizing: border-box;
+
+  &--clickable {
+    padding: 4px;
+  }
+
+  &__main {
+    color: var(--baseColor);
+  }
+
+  &__actions {
+    border: 0 solid;
+    border-top-width: 1px;
+    font-size: 0;
+    margin-top: 24px;
+    padding: 12px 24px;
+    visibility: hidden;
+
+    &--align {
+      &-left {
+        text-align: left;
+      }
+      &-center {
+        text-align: center;
+      }
+      &-right {
+        text-align: right;
+      }
+    }
+
+    &--open {
+      visibility: visible;
+    }
+
+    &--theme {
+      &-base {
+        border-color: var(--mainColor);
+      }
+
+      &-accent {
+        border-color: var(--accentColor);
+      }
+
+      &-secondary {
+        border-color: var(--secondaryColor);
+      }
+
+      &-primary {
+        border-color: var(--primaryColor);
+      }
+
+      &-success {
+        border-color: var(--successColor);
+      }
+
+      &-error {
+        border-color: var(--errorColor);
+      }
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: top;
+  }
+}

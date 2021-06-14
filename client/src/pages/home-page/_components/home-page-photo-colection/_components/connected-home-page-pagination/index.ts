@@ -1,0 +1,1 @@
+export { ConnectedHomePagePagination } from './connected-home-page-pagination';

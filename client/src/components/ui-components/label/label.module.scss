@@ -1,0 +1,98 @@
+@import "../../../styles/constants.module";
+
+.Label {
+  display: inline-block;
+  vertical-align: bottom;
+
+  &--clickable {
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &--size {
+    &-big {
+      font-size: 24px;
+      line-height: 24px;
+      padding: 18px;
+    }
+    &-medium {
+      font-size: 18px;
+      line-height: 18px;
+      padding: 12px;
+    }
+    &-small {
+      font-size: 14px;
+      line-height: 14px;
+      padding: 10px;
+    }
+  }
+
+  &--position {
+    &-left {
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+    &-right {
+      padding-bottom: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+
+    &-top {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+
+
+  }
+
+  &--theme {
+    &-base {
+      color: var(--baseColor, $baseColor);
+    }
+
+    &-accent {
+      color: var(--accentColor, $accentColor);
+    }
+
+    &-main {
+      color: var(--mainColor, $mainColor);
+    }
+
+    &-primary {
+      color: var(--primaryColor, $primaryColor);
+    }
+
+    &-secondary {
+      color: var(--secondaryColor, $secondaryColor);
+    }
+  }
+
+  &--active {
+    color: var(--activeColor, $activeColor);
+  }
+
+  &--error {
+    color: var(--errorColor, $errorColor);
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--disabled {
+    color: var(--disabledColor, $disabledColor);
+    cursor: default;
+    pointer-events: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

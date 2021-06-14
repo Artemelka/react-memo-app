@@ -1,0 +1,1 @@
+export { HomePagePhotoItem } from './home-page-photo-item';

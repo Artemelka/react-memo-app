@@ -1,0 +1,1 @@
+export { ConnectedHomePageNewsList } from './connected-home-page-news-list';

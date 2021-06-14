@@ -1,0 +1,30 @@
+.Home-page-news {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__list,
+  &__item {
+    padding: 0 15px;
+    max-width: 45%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: burlywood;
+    padding-bottom: 20px;
+  }
+
+  &__background {
+    background-color: burlywood;
+    color: black;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    border: 2px solid burlywood;
+  }
+}

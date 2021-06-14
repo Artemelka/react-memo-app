@@ -1,0 +1,43 @@
+@import "../../../styles/constants.module";
+
+.Collapse-panel {
+  border: 0 solid transparent;
+  border-radius: 2px;
+  box-shadow: 0 0 2px var(--mainColor, $mainColor);
+  color: var(--baseColor, $baseColor);
+  overflow: hidden;
+  transition: height .5s;
+  width: 100%;
+
+  &--theme {
+    &-accent {
+      box-shadow: 0 0 2px var(--accentColor, $accentColor);
+    }
+
+    &-secondary {
+      box-shadow: 0 0 2px var(--secondaryColor, $secondaryColor);
+    }
+
+    &-primary {
+      box-shadow: 0 0 2px var(--primaryColor, $primaryColor);
+    }
+
+    &-success {
+      box-shadow: 0 0 2px var(--successColor, $successColor);
+    }
+
+    &-error {
+      box-shadow: 0 0 2px var(--errorColor, $errorColor);
+    }
+  }
+
+  &--variant {
+    &-only-text {
+      box-shadow: none;
+    }
+  }
+
+  &--disabled {
+    box-shadow: 0 0 2px var(--disabledColor, $disabledColor);
+  }
+}

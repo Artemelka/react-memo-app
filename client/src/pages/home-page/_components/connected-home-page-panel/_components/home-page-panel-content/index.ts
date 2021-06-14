@@ -1,0 +1,1 @@
+export { HomePagePanelContent } from './home-page-panel-content';
