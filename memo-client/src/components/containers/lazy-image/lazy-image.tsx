@@ -1,4 +1,4 @@
-import React, {memo, useCallback, useState} from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { fasterClassNames } from '../../../utils';
 import styles from './lazy-image.module.scss';
 

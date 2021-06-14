@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { createStore, Middleware, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk'
@@ -17,7 +17,7 @@ const middlewares: Array<Middleware> = [
 
 const appStore = createStore(appReducer, applyMiddleware(...middlewares));
 
-export const App = () => (
+export const App = memo(() => (
   <Provider store={appStore}>
     <ConnectedRouter history={appHistory}>
       <Switch>
@@ -27,4 +27,4 @@ export const App = () => (
       </Switch>
     </ConnectedRouter>
   </Provider>
-);
+));

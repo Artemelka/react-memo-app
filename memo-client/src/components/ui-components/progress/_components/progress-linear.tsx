@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { fasterClassNames } from '../../../../utils';
 import { getValidPercent, getStatuses } from '../_utils';
 import { CIRCLE_SIZE, PROGRESS_STATUSES } from '../constants';
@@ -7,7 +7,7 @@ import style from '../progress.module.scss';
 
 const cn = fasterClassNames(style);
 
-export const ProgressLinear = ({
+export const ProgressLinear = memo(({
   percent,
   singleColor = true,
   status = PROGRESS_STATUSES.BASE,
@@ -51,4 +51,4 @@ export const ProgressLinear = ({
       </div>
     </div>
   );
-};
+});

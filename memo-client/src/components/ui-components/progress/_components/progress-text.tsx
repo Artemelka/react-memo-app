@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { fasterClassNames } from '../../../../utils';
 import { CIRCLE_SIZE, PROGRESS_STATUSES } from '../constants';
 import { ProgressTextProps } from '../types';
@@ -6,7 +6,7 @@ import style from '../progress.module.scss';
 
 const cn = fasterClassNames(style);
 
-export const ProgressText = ({
+export const ProgressText = memo(({
   label,
   percent,
   status = PROGRESS_STATUSES.BASE,
@@ -30,4 +30,4 @@ export const ProgressText = ({
       {label ? `${label}: ${percent}%` : `${percent}%`}
     </p>
   </div>
-);
+));

@@ -1,4 +1,4 @@
-import React, {memo, useCallback, useRef, useState} from 'react';
+import React, { memo, useCallback, useRef, useState } from 'react';
 import { connect } from 'react-redux';
 import { Button } from '../../../../components';
 import { fasterClassNames } from '../../../../utils';

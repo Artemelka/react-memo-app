@@ -1,4 +1,4 @@
-import React, {  } from 'react';
+import React, { memo } from 'react';
 import { connect } from 'react-redux';
 import { fasterClassNames } from '../../../../../../utils';
 import { newsSelector, AllStore } from '../../../../../../redux';
@@ -15,7 +15,7 @@ type MapStateToProps = {
 
 type ConnectedHomePageNewsListProps = MapStateToProps & {};
 
-export const HomePageNewsList = ({ news }: ConnectedHomePageNewsListProps) => {
+export const HomePageNewsList = memo(({ news }: ConnectedHomePageNewsListProps) => {
   return (
     <ul className={cn(CLASS_NAME)}>
       {news.map(item => (
@@ -27,7 +27,7 @@ export const HomePageNewsList = ({ news }: ConnectedHomePageNewsListProps) => {
       ))}
     </ul>
   );
-};
+});
 
 const mapStateToProps = (state: AllStore): MapStateToProps => ({
   news: newsSelector(state),
