@@ -1,0 +1,40 @@
+.Home-page {
+  padding: 15px 30px;
+
+  &__actions {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__counter {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+
+  &__panel-actions {
+    margin-left: auto;
+  }
+
+  &__section {
+    margin-top: 30px;
+    padding: 10px 5px;
+
+    &-item {
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+
+      &--small {
+        width: 40%;
+      }
+
+      &--large {
+        width: 60%;
+      }
+    }
+  }
+}

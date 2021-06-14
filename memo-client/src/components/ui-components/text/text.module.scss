@@ -1,0 +1,60 @@
+.Text {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--semi-bold {
+    font-weight: 600;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  &--h1 {
+    font-size: 40px;
+  }
+
+  &--h2 {
+    font-size: 36px;
+  }
+
+  &--h3 {
+    font-size: 30px;
+  }
+
+  &--h4 {
+    font-size: 28px;
+  }
+
+  &--h5 {
+    font-size: 26px;
+  }
+
+  &--h6 {
+    font-size: 24px;
+  }
+}

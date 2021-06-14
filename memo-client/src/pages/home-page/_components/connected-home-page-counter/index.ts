@@ -1,0 +1,1 @@
+export { ConnectedHomePageCounter } from './connected-home-page-counter';

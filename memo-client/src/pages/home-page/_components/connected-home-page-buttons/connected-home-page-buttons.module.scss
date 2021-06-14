@@ -1,0 +1,14 @@
+.Home-page-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+
+  &__item {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

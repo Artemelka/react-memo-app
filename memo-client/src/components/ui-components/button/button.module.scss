@@ -1,0 +1,350 @@
+@import "../../../styles/constants.module";
+
+$border-radius: 12px;
+
+.Button {
+  align-items: center;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: var(--baseColor, $baseColor);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  transition: box-shadow, .3s;
+
+  &::after,
+  &::before {
+    background-color: var(--progressContourColor, rgba(255, 255, 255, .3));
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: width .2s;
+    width: 0;
+    z-index: 1;
+  }
+
+  &::after {
+    left: 50%;
+  }
+
+  &::before {
+    right: 50%;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 6px var(--buttonShadowColor, $buttonShadowColor);
+  }
+
+  &:active,
+  &--focused {
+    &::after,
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &--align {
+    &-left {
+      justify-content: flex-start;
+    }
+
+    &-center {
+      justify-content: center;
+    }
+
+    &-right {
+      justify-content: flex-end;
+    }
+  }
+
+  &--size {
+    &-big {
+      font-size: 26px;
+      padding: 14px 30px;
+
+      &-base {
+        padding: 13px 29px;
+      }
+    }
+    &-medium {
+      font-size: 16px;
+      padding: 10px 14px;
+
+      &-base {
+        padding: 9px 13px;
+      }
+    }
+    &-small {
+      font-size: 14px;
+      padding: 7px 12px;
+
+      &-base {
+        padding: 6px 11px;
+      }
+    }
+  }
+
+  &--theme {
+    &-base {
+      background-color: var(--mainColor, $mainColor);
+      border-color: var(--mainColor, $mainColor);
+      color: var(--baseColor, $baseColor);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 6px var(--baseColor, $baseColor);
+
+        &:disabled {
+          box-shadow: none;
+        }
+      }
+    }
+    &-accent {
+      background-color: var(--accentColor, $accentColor);
+      border-color: var(--accentColor, $accentColor);
+      color: var(--accentColor, $accentColor);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 6px var(--accentColor, $accentColor);
+      }
+    }
+    &-primary {
+      background-color: var(--primaryColor, $primaryColor);
+      border-color: var(--primaryColor, $primaryColor);
+      color: var(--primaryColor, $primaryColor);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 6px var(--primaryColor, $primaryColor);
+      }
+    }
+    &-secondary {
+      background-color: var(--secondaryColor, $secondaryColor);
+      border-color: var(--secondaryColor, $secondaryColor);
+      color: var(--secondaryColor, $secondaryColor);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 6px var(--secondaryColor, $secondaryColor);
+      }
+    }
+    &-success {
+      background-color: var(--successColor, $successColor);
+      border-color: var(--successColor, $successColor);
+      color: var(--successColor, $successColor);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 6px var(--successColor, $successColor);
+      }
+    }
+    &-error {
+      background-color: var(--errorColor, $errorColor);
+      border-color: var(--errorColor, $errorColor);
+      color: var(--errorColor, $errorColor);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 6px var(--errorColor, $errorColor);
+      }
+    }
+  }
+
+  &--active {
+    background-color: var(--activeColor, $activeColor);
+    border-color: var(--activeColor, $activeColor);
+    box-shadow: none;
+    color: var(--activeColor, $activeColor);
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      opacity: 1;
+    }
+
+    &-disabled {
+      box-shadow: none;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+
+    &::after,
+    &::before {
+      width: 0;
+    }
+  }
+
+  &--variant {
+    &-base {
+      background-color: transparent;
+      border: 1px solid;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+
+        &:disabled {
+          background-color: transparent;
+        }
+      }
+
+      &:disabled {
+        background-color: transparent;
+      }
+    }
+    &-filled {
+      color: var(--baseColor, $baseColor);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 6px var(--baseColor, $baseColor);
+
+        &:disabled {
+          box-shadow: none;
+        }
+      }
+
+      &-no-icon {
+        color: var(--baseColor, $baseColor);
+      }
+
+      &-base {
+
+        &:disabled {
+          color: var(--mainColor, $mainColor);
+        }
+      }
+    }
+
+    &-only-text {
+      background-color: transparent;
+      border-color: transparent;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border-color: transparent;
+
+        &:disabled {
+          background-color: transparent;
+        }
+      }
+
+      &:disabled {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &--disabled {
+    background-color: var(--disabledColor, $disabledColor);
+    border-color: var(--disabledColor, $disabledColor);
+    box-shadow: none;
+    color: var(--mainColor, $mainColor);
+    cursor: default;
+
+    &::after,
+    &::before {
+      width: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--disabledColor, $disabledColor);
+      box-shadow: none;
+      opacity: 1;
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--rounded {
+    border-radius: 0;
+  }
+
+  &--round {
+    &-bottom {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    &-left {
+      border-bottom-left-radius: $border-radius;
+      border-top-left-radius: $border-radius;
+    }
+
+    &-right {
+      border-bottom-right-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+
+    &-top {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+
+
+  }
+
+  &--icon {
+    border-radius: 50%;
+    padding: 0;
+
+    &-big {
+      height: 46px;
+      width: 46px;
+    }
+    &-medium {
+      height: 28px;
+      width: 28px;
+    }
+    &-small {
+      font-size: 10px;
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+
+    &--only-icon {
+      height: 100%;
+      width: 100%;
+    }
+
+  }
+
+  &__icon-left {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-left: -4px;
+    padding-right: 8px;
+
+    &--only {
+      margin-left: 0;
+      padding-right: 0;
+    }
+  }
+}

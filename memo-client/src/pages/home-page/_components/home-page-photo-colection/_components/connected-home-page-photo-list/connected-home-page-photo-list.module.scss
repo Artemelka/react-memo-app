@@ -1,0 +1,15 @@
+.Home-page-photo-list {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    max-width: 20%;
+    min-width: 150px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,185 @@
+@import "../../../styles/constants.module";
+
+.Checkbox {
+  align-items: center;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  transition: border-color .3s;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &--theme {
+    &-base {
+      background-color: var(--baseColor, $baseColor);
+      border-color: var(--baseColor, $baseColor);
+
+      &-focused {
+        box-shadow: 0 0 6px var(--baseColor, $baseColor);
+      }
+    }
+
+    &-accent {
+      background-color: var(--accentColor, $accentColor);
+      border-color: var(--accentColor, $accentColor);
+
+      &-focused {
+        box-shadow: 0 0 6px var(--accentColor, $accentColor);
+      }
+    }
+
+    &-primary {
+      background-color: var(--primaryColor, $primaryColor);
+      border-color: var(--primaryColor, $primaryColor);
+
+      &-focused {
+        box-shadow: 0 0 6px var(--primaryColor, $primaryColor);
+      }
+    }
+
+    &-secondary {
+      background-color: var(--secondaryColor, $secondaryColor);
+      border-color: var(--secondaryColor, $secondaryColor);
+
+      &-focused {
+        box-shadow: 0 0 6px var(--secondaryColor, $secondaryColor);
+      }
+    }
+
+    &-error {
+      background-color: var(--errorColor, $errorColor);
+      border-color: var(--errorColor, $errorColor);
+
+      &-focused {
+        box-shadow: 0 0 6px var(--errorColor, $errorColor);
+      }
+    }
+  }
+
+  &--variant {
+    &-base {
+      background-color: transparent;
+    }
+
+    &-only-text {
+      background-color: transparent;
+
+      &-checked {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &--disabled,
+  &:disabled {
+    background-color: var(--disabledColor, $disabledColor);
+    border-color: var(--disabledColor, $disabledColor);
+    cursor: default;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &--size {
+    &-big {
+      height: 26px;
+      width: 26px;
+    }
+
+    &-medium {
+      height: 18px;
+      width: 18px;
+    }
+
+    &-small {
+      height: 14px;
+      width: 14px;
+    }
+  }
+
+  &__input {
+    border: none;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    width: 0;
+  }
+
+  &__marker {
+    border-radius: 2px;
+    display: none;
+
+    &--checked {
+      display: block;
+    }
+
+    &--size {
+      &-big {
+        height: 12px;
+        width: 12px;
+      }
+
+      &-medium {
+        height: 8px;
+        width: 8px;
+      }
+
+      &-small {
+        border-radius: 0;
+        height: 6px;
+        width: 6px;
+      }
+    }
+
+    &--indeterminate {
+      height: 2px;
+    }
+
+    &--theme {
+      &-base {
+        background-color: var(--baseColor, $baseColor);
+      }
+
+      &-accent {
+        background-color: var(--accentColor, $accentColor);
+      }
+
+      &-secondary {
+        background-color: var(--secondaryColor, $secondaryColor);
+      }
+
+      &-primary {
+        background-color: var(--primaryColor, $primaryColor);
+      }
+
+      &-error {
+        background-color: var(--errorColor, $errorColor);
+      }
+    }
+
+    &--variant {
+      &-filled {
+        background-color: var(--baseColor, $baseColor);
+
+        &-base {
+          background-color: var(--mainColor, $mainColor);
+        }
+      }
+    }
+
+    &--disabled {
+      background-color: var(--mainColor, $mainColor);
+    }
+  }
+}

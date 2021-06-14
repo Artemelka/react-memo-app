@@ -1,0 +1,11 @@
+.Home-page-panel-actions {
+  padding: 15px 30px;
+
+  &__button {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

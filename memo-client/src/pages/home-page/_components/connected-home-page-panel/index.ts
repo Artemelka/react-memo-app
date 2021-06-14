@@ -1,0 +1,1 @@
+export { ConnectedHomePagePanel } from './connected-home-page-panel';

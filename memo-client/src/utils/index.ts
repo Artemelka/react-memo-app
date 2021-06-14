@@ -1,0 +1,1 @@
+export { fasterClassNames } from './faster-class-names';
